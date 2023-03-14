@@ -22,6 +22,7 @@ type Config struct {
 		Password string `json:"password"`
 	} `json:"database"`
 }
+
 type person struct {
 	Email                string
 	Username             string
@@ -34,6 +35,7 @@ func pswreset(w http.ResponseWriter, r *http.Request) {
 	tpl.Execute(w, nil)
 
 }
+
 func psw_reset(w http.ResponseWriter, r *http.Request) {
 	r.ParseForm()
 	var username = r.Form["username"]
